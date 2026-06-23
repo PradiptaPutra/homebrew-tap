@@ -10,6 +10,15 @@ cask "potret" do
 
   app "Potret.app"
 
+  # Potret isn't Apple-notarized, so after install: strip quarantine (no Gatekeeper
+  # prompt) and register with LaunchServices (so it shows in Launchpad / Spotlight).
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Potret.app"]
+    system_command "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister",
+                   args: ["-f", "#{appdir}/Potret.app"]
+  end
+
   # `brew uninstall --zap potret` removes the app AND all of its data.
   zap trash: [
     "~/Library/Application Support/com.potret.app",
