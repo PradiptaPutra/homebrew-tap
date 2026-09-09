@@ -1,6 +1,6 @@
 cask "potret" do
-  version "0.2.22"
-  sha256 "97558ec51d4e4880619ad5802e2543a83764382c290d9313f6601d3116e2ee24"
+  version "0.4.0"
+  sha256 "a599f8b4b556d2bf997e44433153393f33662ff9809ce5d2a7cd9293c0f7953b"
 
   url "https://github.com/PradiptaPutra/potret/releases/download/v#{version}/Potret_#{version}_universal.dmg",
       verified: "github.com/PradiptaPutra/potret/"
@@ -26,7 +26,6 @@ cask "potret" do
     "~/Library/Caches/potret",
     "~/Library/Preferences/com.potret.app.plist",
     "~/Library/Saved Application State/com.potret.app.savedState",
-    "~/Library/WebKit/com.potret.app",
     "~/Library/LaunchAgents/Potret.plist",
   ]
 end
