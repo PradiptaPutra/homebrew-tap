@@ -1,6 +1,6 @@
 cask "potret" do
-  version "0.4.1"
-  sha256 "c0ee6b55af9f785bb7bcf969b4ce5f6b6845ad537dcbb770753c2ac04ddf3bb2"
+  version "0.4.2"
+  sha256 "233dbeed749b7b779cbdd0a470293c64f898a33969f383245e14af4e125e1e59"
 
   url "https://github.com/PradiptaPutra/potret/releases/download/v#{version}/Potret_#{version}_universal.dmg",
       verified: "github.com/PradiptaPutra/potret/"
